@@ -1,3 +1,5 @@
+import Layout from "../components/Layout";
+
 export default function Jsx() {
 
     const a = 7;
@@ -9,16 +11,18 @@ export default function Jsx() {
     });
 
     return (
-        <div>
-            <h1>JSX é um conceito Central</h1>
-            <h2>Multiplicando por 7:</h2>
-            <ul>
-                {results.map((result, index) => (
-                    <li key={index}>
-                        {numbers[index]} x 7 = {result}
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <Layout titulo="Entendendo JSX">
+            <div>
+                <h1>JSX é um conceito Central</h1>
+                <h2>Multiplicando por 7:</h2>
+                <ul>
+                    {results.map((result, index) => (
+                        <li key={index}>
+                            {numbers[index]} x 7 = {result}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </Layout>
     );
 }
